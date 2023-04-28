@@ -15,8 +15,11 @@
 <h1>{{ title }}</h1>
 <section>
   <nav>
-    <a routerLink="/home">Home</a>
-    <a routerLink="/agenda">Agenda</a>
+    <button mat-button [matMenuTriggerFor]="afterMenu">Menu</button>
+<mat-menu #afterMenu="matMenu" xPosition="after">
+  <button mat-menu-item routerLink="/home">Home</button>
+  <button mat-menu-item routerLink="/agenda">Agenda</button>
+</mat-menu>   
   </nav>
   <hr/>
   <router-outlet></router-outlet>
