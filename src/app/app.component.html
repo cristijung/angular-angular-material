@@ -1,28 +1,27 @@
-<mat-toolbar color="primary"> 
+<mat-toolbar color="accent">
   <mat-toolbar-row>
     <span>
       Agenda OnLine
       <mat-icon>date_range</mat-icon>
     </span>
     <span class="example-spacer"></span>
-    <button mat-raised-button color="primary">
+    <button mat-raised-button color="accent">
       <mat-icon>add</mat-icon>
-      Criar Agenda
-    </button>    
+      Criar agenda
+    </button>   
   </mat-toolbar-row>  
 </mat-toolbar>
 
-<h1>{{ title }}</h1>
-<section>
-  <nav>
-    <button mat-button [matMenuTriggerFor]="afterMenu">Menu</button>
-<mat-menu #afterMenu="matMenu" xPosition="after">
-  <button mat-menu-item routerLink="/home">Home</button>
-  <button mat-menu-item routerLink="/agenda">Agenda</button>
-</mat-menu>   
-  </nav>
-  <hr/>
-  <router-outlet></router-outlet>
-    
-</section>
+<section class="container">
 
+<nav>   
+  <button mat-button [matMenuTriggerFor]="afterMenu" color="accent">Menu</button>
+  <mat-menu #afterMenu="matMenu" xPosition="after">
+    <button mat-menu-item routerLink="/home">Home</button>
+    <button mat-menu-item routerLink="/agenda">Agenda</button>
+  </mat-menu>
+</nav>
+
+
+<router-outlet></router-outlet>
+</section>
