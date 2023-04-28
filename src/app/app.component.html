@@ -1,2 +1,21 @@
+<mat-toolbar color="primary"> 
+  <mat-toolbar-row>
+    <span>
+      Agenda OnLine
+      <mat-icon>date_range</mat-icon>
+    </span>
+    <span class="example-spacer"></span>    
+  </mat-toolbar-row>  
+</mat-toolbar>
+
 <h1>{{ title }}</h1>
+<section>
+  <nav>
+    <a routerLink="/home">Home</a>
+    <a routerLink="/agenda">Agenda</a>
+  </nav>
+  <hr/>
+  <router-outlet></router-outlet>
+    
+</section>
 
